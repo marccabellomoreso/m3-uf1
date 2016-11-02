@@ -1,0 +1,377 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package relacion1;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ *
+ * @author Marc
+ */
+public class Relacion1 {
+
+    private static final Scanner teclado = new Scanner(System.in);
+    private static final Random aleatorio = new Random();
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //Relacion1.ejercicio2();
+        //Relacion1.ejercicio3();
+        //Relacion1.ejercicio4();
+        //Relacion1.ejercicio5();
+        //Relacion1.ejercicio6();
+        //Relacion1.ejercicio7();
+        //Relacion1.ejercicio8();
+        //Relacion1.ejercicio9();
+        //Relacion1.ejercicio10();
+        //Relacion1.ejercicio11a();
+        //Relacion1.ejercicio11b();
+        //Relacion1.ejercicio11c();
+          Relacion1.ejercicio12();
+    }
+
+    public static void ejercicio2() {
+        int n1;
+        int n2;
+        double resultado;
+
+        System.out.println("Introduce el dividiendo:");
+        n1 = teclado.nextInt();
+
+        System.out.println("Introduce el divisor:");
+        n2 = teclado.nextInt();
+
+        resultado = n1 % n2;
+
+        if (resultado == 0) {
+            System.out.println("Los dos números son divisibles.");
+
+        } else {
+            System.out.println("Los dos números no son divisibles.");
+        }
+    }
+
+    public static void ejercicio3() {
+        int n1;
+        int n2;
+        int n3;
+
+        System.out.println("Introduce el primer numero");
+        n1 = teclado.nextInt();
+
+        System.out.println("Introduce el segundo numero");
+        n2 = teclado.nextInt();
+
+        System.out.println("Introduce el tercer numero");
+        n3 = teclado.nextInt();
+
+        if (n1 > n2 && n1 > n3) {
+            System.out.println("El máximo es:" + n1);
+
+        } else if (n2 > n1 && n2 > n3) {
+            System.out.println("El máximo es:" + n2);
+        } else if (n3 > n1 && n3 > n1) {
+            System.out.println("El máximo es:" + n3);
+        }
+        if (n1 < n2 && n1 < n3) {
+            System.out.println("El mínimo es:" + n1);
+        } else if (n2 < n1 && n2 < n1) {
+            System.out.println("El mínimo es" + n2);
+        } else if (n3 < n1 && n3 < n2) {
+            System.out.println("El mínimo es" + n3);
+        }
+
+    }
+
+    public static void ejercicio4() {
+        char c;
+        int valor;
+        c = teclado.next().charAt(0);
+
+        valor = (int) c;
+
+        if (valor < 65 || c > 90 && c < 97 || c > 122) {
+            //no letras
+            System.out.println("Error, no es ni vocal ni consonante");
+
+        } else if (c == 'a' || c == 'e') {
+            //vocales
+            System.out.println("Es una vocal");
+        } else {
+            //consonantes
+            System.out.println("Es una consonante");
+        }
+        //public static void readChar() {
+        //char c;
+        //c= teclado.next().charAt(0);
+    }
+
+    public static void ejercicio5() {
+
+        double nota;
+        String calificacion;
+
+        System.out.println("Introduce una nota");
+        nota = teclado.nextDouble();
+
+        if (nota < 5) {
+            calificacion = "Suspenso";
+        } else if (nota >= 5 && nota < 6.5) {
+            calificacion = "Aprobado";
+        } else if (nota >= 6.5 && nota < 8.5) {
+            calificacion = "Notable";
+        } else if (nota >= 8.5 && nota < 9.75) {
+            calificacion = "Excelente";
+        } else if (nota >= 9.75 && nota < 10) {
+            calificacion = "Matricula";
+        } else {
+            calificacion = "La nota no es valida";
+        }
+
+        System.out.println(calificacion);
+    }
+
+    public static void ejercicio6() {
+
+        int day;
+        String dayString;
+
+        System.out.println("Introduce el número del día");
+        day = teclado.nextInt();
+
+        switch (day) {
+            case 1:
+                dayString = "Lunes";
+                break;
+            case 2:
+                dayString = "Martes";
+                break;
+            case 3:
+                dayString = "Miercoles";
+                break;
+            case 4:
+                dayString = "Jueves";
+                break;
+            case 5:
+                dayString = "Viernes";
+                break;
+            case 6:
+                dayString = "Sabado";
+                break;
+            case 7:
+                dayString = "Domingo";
+                break;
+            default:
+                dayString = "El número de día es incorrecto";
+                break;
+        }
+        System.out.println(dayString);
+    }
+
+    public static void ejercicio7() {
+
+        int day;
+
+        System.out.println("Introduce el número del día");
+        day = teclado.nextInt();
+        if (day == 1) {
+            System.out.println("Lunes");
+        }
+        if (day == 2) {
+            System.out.println("Martes");
+        }
+        if (day == 3) {
+            System.out.println("Miercoles");
+        }
+        if (day == 4) {
+            System.out.println("Jueves");
+        }
+        if (day == 5) {
+            System.out.println("Viernes");
+        }
+        if (day == 6) {
+            System.out.println("Sabado");
+        }
+        if (day == 7) {
+            System.out.println("Domingo");
+        }
+    }
+
+    public static void ejercicio8() {
+        int nota;
+        char acta;
+        String notaString;
+
+        System.out.println("Introduce la nota");
+        nota = teclado.nextInt();
+
+        switch (nota) {
+            case 0:
+                notaString = "S";
+            case 1:
+                notaString = "S";
+                break;
+            case 2:
+                notaString = "S";
+                break;
+            case 3:
+                notaString = "S";
+                break;
+            case 4:
+                notaString = "S";
+                break;
+            case 5:
+                notaString = "A";
+                break;
+            case 6:
+                notaString = "A";
+                break;
+            case 7:
+                notaString = "N";
+                break;
+            case 8:
+                notaString = "N";
+                break;
+            case 9:
+                notaString = "E";
+                break;
+            case 10:
+                notaString = "M";
+            default:
+                notaString = "La nota es incorrecta";
+                break;
+        }
+        System.out.println(notaString);
+
+    }
+
+    public static void ejercicio9() {
+        int days = 0;
+        int month;
+        int year;
+
+        System.out.println("Introduce un mes");
+        month = teclado.nextInt();
+        System.out.println("Introduce un año");
+        year = teclado.nextInt();
+
+        switch (month) {
+            case 1:
+                days = 31;
+                break;
+            case 2:
+                if ((year % 4) != 0) {
+                    days = 28;
+
+                } else if ((year % 4) == 0 && (year % 100) == 0 && (year % 400) != 0) {
+                    days = 28;
+                } else {
+                    days = 29;
+                }
+                break;
+            case 3:
+                days = 31;
+                break;
+            case 4:
+                days = 30;
+                break;
+            case 5:
+                days = 31;
+                break;
+            case 6:
+                days = 30;
+                break;
+            case 7:
+                days = 31;
+                break;
+            case 8:
+                days = 31;
+                break;
+            case 9:
+                days = 30;
+                break;
+            case 10:
+                days = 31;
+                break;
+            case 11:
+                days = 30;
+                break;
+            case 12:
+                days = 31;
+                break;
+            default:
+                System.out.println("Caracter erroneo");
+        }
+        System.out.println("Tiene " + days + " dias");
+
+    }
+
+    public static void ejercicio10() {
+        //if (x < y < z) printf (“%d < %d < %d\n”, x, y, z); <-- malament
+        //if (x < y && y < z) printf (“%d < %d < %d\n”, x, y, z); <-- b
+    }
+
+    public static void ejercicio11a() {
+        int par = 2;
+        int n = 20;
+        int cnt = 1;
+        int suma = 0;
+        System.out.println(par);
+
+        while (cnt <= n) {
+            par = par + 2;
+            System.out.println(par);
+            suma = suma + par;
+            cnt++;
+        }
+
+    }
+
+    public static void ejercicio11b() {
+        int par = 2;
+        int n = 20;
+        int cnt = 1;
+        int suma = 0;
+
+        System.out.println(par);
+
+        //for (par = 2; par <= n * 2; par = par + 2) {
+        //System.out.println("par");
+        //}
+        for (cnt = 2; cnt <= n; cnt++) {
+            par = par + 2;
+            System.out.println("par");
+            suma = suma + par;
+
+        }
+
+    }
+
+    public static void ejercicio11c() {
+        int par = 2;
+        int n = 20;
+        int cnt = 1;
+        int suma = 0;
+        
+        System.out.println(par);
+        
+        do {
+            par = par + 2;
+            System.out.println(par);
+            suma = suma + par;
+            cnt++;
+        } while (cnt <= n);
+            
+        
+    }
+    public static void ejercicio12() {
+        
+    }
+}
